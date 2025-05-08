@@ -1,0 +1,1478 @@
+/* Basic Resets and Global Styles */
+body, h1, h2, h3, h4, p, ul, ol, li, figure, figcaption, blockquote, dl, dd {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif; /* Placeholder font */
+    color: #ffffff; /* Default text color for dark theme */
+}
+
+body {
+    background-color: #000000; /* Changed to black background */
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Header & Navigation */
+header {
+    padding: 20px 5%;
+    background-color: transparent; /* Changed to transparent to show gradient */
+    position: absolute; /* Changed from fixed to absolute to position it at the top */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensure header spans full width */
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: #E0E0E0; /* Light grey for nav links */
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #A855F7; /* Purple accent on hover */
+}
+
+.get-quote-btn {
+    background-color: #A855F7; /* Purple button */
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 25px; /* Pill shape */
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.get-quote-btn:hover {
+    background-color: #9333EA; /* Darker purple on hover */
+}
+
+/* Main Content Area */
+main {
+    padding-top: 0; /* Removed padding as header is now absolute positioned */
+}
+
+/* Hero Section */
+.hero {
+    background-color: #3a2e70; /* Changed to a single color as requested */
+    background-image: url('../images/background-abstract-lines.png'); /* Restored background image */
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    padding: 150px 5% 50px; /* Increased top padding to accommodate the navigation bar */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 85vh;
+    position: relative; /* For positioning hero images */
+}
+
+.hero-content {
+    max-width: 50%;
+    position: relative; /* Ensure z-index creates a stacking context */
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 3.5em; /* Large heading */
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.explore-now-btn {
+    background-color: #fff;
+    color: #0A0128; /* Dark blue text */
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.explore-now-btn:hover {
+    background-color: #A855F7;
+    color: #fff;
+}
+
+.hero-images {
+    position: relative;
+    width: 45%;
+    height: auto; /* Maintain aspect ratio */
+    z-index: 1; /* Ensure it's below hero-content */
+}
+
+.hero-images .main-hero-img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    border: 5px solid #A855F7; /* Purple border */
+}
+
+.hero-images .sub-hero-img1,
+.hero-images .sub-hero-img2 {
+    position: absolute;
+    width: 40%; /* Smaller images */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    border: 3px solid #FF69B4; /* Pink border */
+}
+
+.hero-images .sub-hero-img1 {
+    bottom: -10%;
+    right: -15%;
+    transform: rotate(5deg);
+}
+
+.hero-images .sub-hero-img2 {
+    bottom: -20%;
+    left: -10%;
+    transform: rotate(-5deg);
+}
+
+
+/* Trusted Brands Section */
+.trusted-brands {
+    padding: 80px 5%;
+    text-align: center;
+    background-color: #000; /* Black background for this section */
+}
+
+.trusted-brands h2 {
+    font-size: 2.4em;
+    margin-bottom: 60px;
+    color: #fff;
+    line-height: 1.4;
+}
+
+.brand-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 80px 100px; /* Increased spacing between logos */
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.brand-logos img {
+    max-height: 90px; /* Increased size for better visibility */
+    max-width: 220px; /* Increased max-width for wide logos */
+    object-fit: contain; /* Ensures logo fits and maintains aspect ratio */
+    transition: transform 0.3s ease;
+    filter: brightness(1.1); /* Slightly brighter logos */
+}
+
+.brand-logos img:hover {
+    transform: scale(1.1); /* Slightly larger hover effect */
+}
+
+/* Life Protocol Section - OLD STYLES COMMENTED OUT
+.life-protocol {
+    padding: 60px 5%;
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    background-color: #0A0128;
+}
+
+.protocol-card {
+    background-color: #1E0A3C;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    text-align: center;
+    padding-bottom: 20px;
+    width: calc(33.333% - 20px);
+}
+
+.protocol-card img:first-child {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.protocol-card h3 {
+    font-size: 1.5em;
+    margin: 15px 20px 5px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.protocol-card p {
+    color: #D1D5DB;
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-image: none !important;
+    background-color: transparent !important;
+    position: relative;
+    z-index: 10;
+    margin-top: 5px;
+}
+.protocol-card .title-play-icon {
+    width: 32px;
+    height: 32px;
+    margin-left: 10px;
+}
+.protocol-card .icon {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.protocol-card .play-icon {
+    width: 24px;
+    height: 24px;
+}
+*/
+
+
+/* Figma-based Life Protocol Section Styles */
+.figma-life-protocol-container {
+    padding: 40px 5%;
+    display: flex;
+    justify-content: center; /* Changed to center to match new screenshot */
+    gap: 10px; /* Further reduced gap to make cards closer */
+    position: relative;
+    background-color: #000000; /* Black background as shown in screenshot */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.figma-card {
+    width: calc((100% - (2 * 10px)) / 3); /* Distribute width among 3 cards with smaller gap */
+    aspect-ratio: 1 / 1; /* Square aspect ratio to match screenshot */
+    max-width: 320px; /* Reduced max-width to make cards closer */
+    min-width: 250px; /* Prevent cards from becoming too small */
+    background-color: #000000; /* Changed to black background */
+    position: relative;
+    border-radius: 20px; /* Slightly reduced border radius to match screenshot */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3); /* Add shadow for depth */
+}
+
+.figma-card-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    border-radius: 20px;
+    filter: brightness(0.7) saturate(1.2); /* Darken and enhance colors to match screenshot */
+}
+
+.figma-card-content-overlay {
+    position: relative;
+    z-index: 2;
+    padding: 20px; /* Reduced padding to match screenshot */
+    margin-top: auto;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 40%, rgba(0, 0, 0, 0.4) 70%, rgba(0, 0, 0, 0.1) 100%); /* Changed to black gradient */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.figma-card-title {
+    color: #ffffff;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.9);
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 700; /* Bold */
+    font-size: 24px; /* Reduced size to match screenshot */
+    text-align: left;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.figma-play-icon {
+    background-color: rgba(168, 85, 247, 0.9); /* Purple background for play button */
+    border-radius: 50%;
+    width: 45px; /* Increased size to match screenshot */
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+}
+
+.figma-play-icon:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-left: 16px solid white;
+    border-bottom: 10px solid transparent;
+    margin-left: 4px; /* Slight adjustment to center the triangle */
+}
+
+.figma-duration-group {
+    height: 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.figma-clock-icon {
+    background-image: url('../images/icon-clock-pink.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 16px; /* Reduced size to match screenshot */
+    height: 16px;
+}
+
+.figma-duration-text {
+    color: #ffffff;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 400; /* Regular weight to match screenshot */
+    font-size: 14px; /* Reduced size to match screenshot */
+    opacity: 0.9;
+    text-align: left;
+}
+
+/* Specific positioning for cards if needed, Figma used absolute for these */
+/* This might conflict with the flex layout of figma-life-protocol-container */
+/* .figma-card-1 { top: 0px; left: 0px; } */
+/* .figma-card-2 { top: 0px; left: 461px; } */ /* (421 width + 14 margin + 14 margin + 14 margin = 463 approx) */
+/* .figma-card-3 { top: 0px; left: 922px; } */ /* (461 + 421 + 14*2 = 920 approx) */
+
+/* Ensure the main image is used as a background for the card, not a separate img tag if using this CSS structure */
+/* If using img tag for background, ensure it's positioned correctly behind content */
+/* Podcast Showcase Section */
+.podcast-showcase {
+    padding: 80px 0;
+    text-align: center;
+    background: #000000; /* Solid black background */
+    background-image: url('../images/background-abstract-lines.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    background-color: #000000; /* Changed to black background */
+    display: block !important; /* Ensure it's visible */
+}
+
+.podcast-showcase::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.podcast-showcase h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
+    color: #fff;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.4;
+    padding: 0 5%;
+    position: relative;
+    z-index: 2;
+}
+
+.showcase-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 0 5%;
+    margin: 0 auto;
+    max-width: 1200px;
+    position: relative;
+    z-index: 2;
+}
+
+.podcast-card {
+    flex: 1;
+    max-width: 300px;
+    height: 380px;
+    background-color: #000000; /* Changed to black background */
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.podcast-card.featured {
+    max-width: 350px;
+    height: 400px;
+    background-image: url('../images/Top Podcaster_1.png');
+    background-size: cover;
+    background-position: center;
+    z-index: 2;
+}
+
+.podcast-card.left-card {
+    background-image: url('../images/Top Podcaster_2.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.podcast-card.right-card {
+    background-image: url('../images/Top Podcaster_2.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.podcast-label {
+    background-color: rgba(255, 165, 0, 0.8);
+    color: #000;
+    font-size: 0.7em;
+    padding: 5px 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.podcast-card.featured .podcast-label {
+    background-color: rgba(255, 215, 0, 0.9);
+}
+
+.podcast-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+}
+
+.podcast-card:not(.featured) .podcast-content {
+    background: radial-gradient(circle, rgba(255,0,128,0.3) 0%, rgba(0,0,0,0.8) 70%);
+}
+
+.podcast-content h3 {
+    color: #fff;
+    font-size: 1.8em;
+    margin: 5px 0;
+    font-weight: 600;
+    letter-spacing: 2px;
+    opacity: 0.9;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.podcast-info {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.podcast-info span {
+    display: block;
+    color: #fff;
+    font-size: 0.8em;
+    opacity: 0.8;
+    margin-bottom: 5px;
+}
+
+.featured-title {
+    color: #fff;
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 8px 15px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+/* Testimonial Slider Section */
+.testimonial-slider {
+    padding: 80px 5%;
+    background-color: #000; /* Black background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('../images/background-abstract-lines.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonial {
+    display: flex;
+    align-items: stretch;
+    background-color: rgba(10, 1, 40, 0.7); /* Semi-transparent dark blue/purple */
+    border-radius: 20px;
+    max-width: 1000px;
+    width: 100%;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    border: 1px solid rgba(168, 85, 247, 0.3); /* Subtle purple border */
+    height: 400px; /* Increased height to match screenshot */
+}
+
+.testimonial-content {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.testimonial-content h3 {
+    font-size: 2.5em;
+    color: #fff;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+.testimonial-content .company {
+    font-size: 1em;
+    color: #E0E0E0; /* Light grey */
+    margin-bottom: 20px;
+    font-weight: normal;
+    opacity: 0.8;
+}
+
+.testimonial-content hr {
+    border: 0;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.2); /* Subtle divider */
+    width: 100px; /* Shorter line to match screenshot */
+    margin-bottom: 20px;
+    margin-left: 0; /* Align to left */
+}
+
+.testimonial-content p {
+    font-size: 1.1em;
+    color: #E0E0E0;
+    line-height: 1.7;
+    max-width: 90%; /* Limit width for better readability */
+}
+
+.testimonial-image-container {
+    flex: 1;
+    background-color: #0A1525; /* Dark blue background */
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonial-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.slider-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    color: #fff;
+    position: relative;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.slider-controls span {
+    cursor: pointer;
+    color: #fff;
+}
+
+.prev-arrow, .next-arrow {
+    font-size: 1.5em;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.prev-arrow:hover, .next-arrow:hover {
+    opacity: 1;
+}
+
+.slider-counter {
+    font-size: 2.5em;
+    font-weight: bold;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+.slider-total {
+    font-size: 0.5em;
+    opacity: 0.7;
+    font-weight: normal;
+    margin-left: 2px;
+}
+
+/* New Testimonials Grid Styles */
+.testimonials-grid {
+    background-color: #000000; /* Black background for the section */
+    padding: 60px 0; /* Vertical padding, horizontal will be handled by card margins or container */
+    overflow: hidden; /* Important for the horizontal scroll illusion */
+    position: relative;
+}
+
+.testimonials-grid h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #fff;
+    margin-bottom: 50px;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: bold;
+}
+
+.testimonials-slider-wrapper {
+    /* This element is translated by JavaScript for the scroll effect.
+       It should NOT be display:flex (with default row direction) if its children (the rows)
+       are meant to stack vertically. It acts as a container for the vertically stacked rows,
+       and this whole container slides. */
+    width: fit-content; /* It needs to be wide enough to contain the content of the rows for scrolling. */
+    will-change: transform;
+    position: relative; /* Establish a positioning context if needed. */
+    /* Removing display:flex here to allow rows to stack vertically by default */
+}
+
+/* Style for the new row containers */
+.testimonial-row {
+    display: flex; /* Lays out cards horizontally within each row */
+    flex-shrink: 0; /* Prevent rows from shrinking */
+    width: fit-content; /* Each row expands to fit its cards */
+    padding-bottom: 2px; /* Minimal space below each row */
+    position: relative;
+}
+
+.testimonial-row-1 {
+    padding-left: 10px; /* Further reduced */
+    /* margin-top: 0; default */
+}
+.testimonial-row-2 {
+    padding-left: 10px;
+    margin-top: 2px; /* Minimal vertical spacing */
+    /* New target card width ~600px. Half is 300px. */
+    margin-left: -300px; /* Adjusted horizontal offset */
+}
+.testimonial-row-3 {
+    padding-left: 10px;
+    margin-top: 2px; /* Minimal vertical spacing */
+}
+
+
+/* Adjust card styling - making cards "more longer" */
+.testimonial-card {
+    background-color: #111117;
+    border-radius: 10px;
+    padding: 15px;
+    margin-right: 15px;
+    margin-bottom: 2px; /* Minimal bottom margin */
+    width: 600px; /* Very wide card */
+    min-width: 580px;
+    height: 190px; /* Height remains fixed */
+    max-height: 190px; /* Max height remains fixed */
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #E0E0E0;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    font-family: 'Red Hat Display', sans-serif;
+    margin-bottom: 10px;
+    width: 500px; /* Even wider card */
+    min-width: 480px;
+    height: 190px; /* Height remains fixed */
+    max-height: 190px; /* Max height remains fixed */
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Faint border as seen in image */
+    display: flex;
+    flex-direction: column;
+    color: #E0E0E0; /* Light grey text */
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Smoother transition */
+    font-family: 'Red Hat Display', sans-serif; /* Consistent font */
+    /* No nth-child staggering needed here anymore */
+}
+
+/* Vertical offsets are now handled by margin-top on the .testimonial-row-X classes */
+
+.testimonial-card:hover {
+    transform: translateY(-10px) scale(1.03); /* Enhanced hover effect */
+    box-shadow: 0px 0px 2px rgba(204, 204, 204, 0.2), 0px 6px 6px rgba(0, 0, 0, 0.1), 0px 12px 12px rgba(0, 0, 0, 0.1), 0px 20px 20px rgba(0, 0, 0, 0.1), 0px 35px 35px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card .card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.testimonial-card .profile-image {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    flex-shrink: 0; /* Prevent image from shrinking */
+}
+
+.testimonial-card .name-role {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center name/role if space allows */
+}
+
+.testimonial-card .name {
+    font-size: 0.9em;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0;
+    line-height: 1.2; /* Adjust line height */
+}
+
+.testimonial-card .role {
+    font-size: 0.7em;
+    color: #9090A0;
+    margin: 0;
+    margin-top: 2px; /* Small space */
+    line-height: 1.2; /* Adjust line height */
+}
+
+.testimonial-card .stars {
+    color: #FFC700;
+    margin-bottom: 8px;
+    font-size: 0.9em;
+    letter-spacing: 0.5px;
+    flex-shrink: 0; /* Prevent stars from shrinking */
+}
+
+.testimonial-card .testimonial-text {
+    font-size: 0.8em;
+    line-height: 1.45;
+    color: #A0A0B0;
+    flex-grow: 1; /* Allow text to take up remaining space */
+    margin: 0;
+    overflow: hidden; /* Hide overflowing text if card height is fixed */
+    text-overflow: ellipsis; /* Add ellipsis for overflowing text (might need more lines for it to show) */
+    /* For multi-line ellipsis, more complex CSS or JS is needed.
+       A simple overflow:hidden will just cut off text. */
+}
+
+/* Featured Testimonial Section */
+.featured-testimonial {
+    padding: 60px 5%;
+    background-color: #000000;
+    position: relative;
+    overflow: hidden;
+    /* background-image: url('../images/background-abstract-lines.png');
+    background-size: cover;
+    background-position: center; */
+}
+
+.featured-testimonial-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    border: 2px solid #A855F7;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    background-color: #000000;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    height: 400px;
+}
+
+.featured-testimonial-content {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.featured-testimonial-content h3 {
+    font-size: 2em;
+    color: #fff;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+.featured-testimonial-content .company {
+    font-size: 0.9em;
+    color: #E0E0E0;
+    margin-bottom: 20px;
+    font-weight: normal;
+    opacity: 0.8;
+}
+
+.featured-testimonial-content p {
+    font-size: 1em;
+    color: #E0E0E0;
+    line-height: 1.7;
+    max-width: 90%;
+}
+
+.featured-testimonial-image {
+    flex: 1;
+    background-color: #000000;
+    position: relative;
+    overflow: hidden;
+}
+
+.featured-testimonial-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.featured-testimonial-controls {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 30px;
+    left: 40px;
+    gap: 15px;
+}
+
+.featured-testimonial-arrow {
+    font-size: 1.5em;
+    color: #fff;
+    opacity: 0.7;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.featured-testimonial-arrow:hover {
+    opacity: 1;
+}
+
+.featured-testimonial-counter {
+    font-size: 2em;
+    font-weight: bold;
+    color: #fff;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+.featured-testimonial-total {
+    font-size: 0.5em;
+    opacity: 0.7;
+    font-weight: normal;
+    margin-left: 2px;
+}
+
+/* Ensure the old testimonial-slider section is hidden if not removed from HTML */
+.testimonial-slider {
+    display: none !important;
+}
+.testimonial-card .stars {
+    color: #FFD700; /* Gold for stars */
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.testimonial-card p:last-of-type { /* Testimonial text */
+    font-size: 1em;
+    color: #E0E0E0;
+    line-height: 1.6;
+}
+.testimonial-card:nth-child(4) p { /* For the card with only text */
+    font-style: italic;
+    color: #ccc;
+    font-size: 1.1em;
+}
+
+
+/* Full Service Production Section */
+.full-service-production {
+    padding: 80px 5%;
+    text-align: center;
+    background-color: #000000;
+    position: relative;
+    overflow: hidden;
+}
+
+.full-service-production::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(25, 25, 112, 0.2) 0%, rgba(75, 0, 130, 0.2) 100%);
+    z-index: 0;
+}
+
+.full-service-production h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+.need-more-details-btn {
+    background-color: #fff;
+    color: #0A0128;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 50px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.need-more-details-btn:hover {
+    background-color: #A855F7;
+    color: #fff;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: left;
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-item {
+    background-color: rgba(59, 59, 140, 0.7);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.4);
+}
+
+.service-icon {
+    color: #fff;
+    background-color: #3B3B8C;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.service-icon svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+.service-item h4 {
+    font-size: 1.2em;
+    color: #fff;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.service-item p {
+    font-size: 0.9em;
+    color: #E0E0E0;
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
+@media (max-width: 992px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Easy Steps Section */
+.easy-steps {
+    padding: 80px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    background-color: #000; /* Black background */
+}
+
+.steps-content {
+    max-width: 55%;
+}
+
+.steps-content h2 {
+    font-size: 2.5em;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.steps-content ol {
+    list-style: none;
+    counter-reset: steps-counter;
+}
+
+.steps-content ol li {
+    margin-bottom: 30px;
+    padding-left: 60px; /* Space for custom number */
+    position: relative;
+}
+
+.steps-content ol li::before {
+    counter-increment: steps-counter;
+    content: counter(steps-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    background-color: #0A0128;
+    color: #A855F7; /* Purple number */
+    border: 2px solid #A855F7;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.steps-content ol li:not(:last-child)::after { /* Dotted line connector */
+    content: '';
+    position: absolute;
+    left: 19px; /* Center with the number */
+    top: 45px; /* Start below the number */
+    bottom: -25px; /* Extend to next item's top */
+    width: 2px;
+    background-image: linear-gradient(to bottom, #A855F7 33%, transparent 0%);
+    background-size: 2px 10px; /* Dotted line effect */
+    background-repeat: repeat-y;
+}
+
+
+.steps-content ol li h4 {
+    font-size: 1.5em;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.steps-content ol li p {
+    font-size: 1em;
+    color: #E0E0E0;
+    line-height: 1.6;
+}
+
+.steps-image img {
+    border-radius: 15px;
+    max-width: 400px; /* Adjust as needed */
+    box-shadow: 0 10px 20px rgba(168, 85, 247, 0.3); /* Purple glow */
+}
+
+/* CTA Amplify Section */
+.cta-amplify {
+    padding: 80px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 40px;
+    background-image: url('../images/background-abstract-lines.png');
+    background-size: cover;
+    background-position: top;
+}
+
+.cta-image img {
+    max-width: 350px; /* Adjust as needed */
+    border-radius: 15px;
+}
+
+.cta-content {
+    max-width: 50%;
+    text-align: left;
+}
+
+.cta-content h2 {
+    font-size: 2.8em;
+    color: #fff;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.cta-content p {
+    font-size: 1.1em;
+    color: #E0E0E0;
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+
+.start-your-podcast-btn {
+    background-color: #FF69B4; /* Pink button */
+    color: #fff;
+    padding: 18px 35px;
+    border-radius: 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.start-your-podcast-btn:hover {
+    background-color: #F43F9E; /* Darker pink */
+}
+
+/* Footer */
+footer {
+    background-color: #000000; /* Ensure black background */
+    padding: 80px 5% 40px; /* Increased padding */
+    color: #E0E0E0; /* Lighter grey for better readability on black */
+    font-family: 'Red Hat Display', sans-serif; /* Consistent font */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items to the top */
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-left {
+    flex-basis: 45%; /* Adjusted basis */
+    min-width: 300px;
+}
+
+.footer-left h3 {
+    font-size: 2.8em; /* Larger "PODCAST" title */
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.footer-left p {
+    font-size: 0.95em; /* Slightly larger paragraph text */
+    line-height: 1.7;
+    margin-bottom: 15px;
+    color: #B0B0B0; /* Slightly darker grey for paragraph */
+}
+
+.footer-left p:last-of-type { /* Copyright text */
+    font-size: 0.85em;
+    color: #888888; /* Even lighter grey for copyright */
+    margin-top: 30px;
+}
+
+.footer-right {
+    flex-basis: 48%; /* Adjusted basis */
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align content to the right */
+}
+
+.footer-subscribe-form {
+    display: flex;
+    margin-bottom: 30px; /* Space below subscribe form */
+    width: 100%;
+    max-width: 400px; /* Limit width of subscribe form */
+}
+
+.footer-subscribe-form input[type="email"] {
+    flex-grow: 1;
+    padding: 15px; /* Increased padding */
+    border: 1px solid #333333; /* Darker border */
+    background-color: #1A1A1A; /* Dark input background */
+    color: #ffffff;
+    border-radius: 8px 0 0 8px; /* Rounded left corners */
+    font-size: 0.9em;
+    outline: none;
+}
+
+.subscribe-btn {
+    background-color: #FADAFB; /* Light pink/lavender background */
+    color: #1A1A1A; /* Dark text for contrast */
+    padding: 15px 30px; /* Increased padding */
+    border-radius: 0 8px 8px 0; /* Rounded right corners */
+    font-weight: bold;
+    font-size: 0.9em;
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease;
+}
+
+.subscribe-btn:hover {
+    background-color: #F7C5F5; /* Slightly darker on hover */
+}
+
+.social-icons {
+    margin-bottom: 30px; /* Space below social icons */
+    display: flex;
+    gap: 20px; /* Space between icons */
+}
+
+.social-icons a img {
+    width: 28px; /* Slightly larger icons */
+    height: 28px;
+    filter: brightness(0) invert(1); /* White icons */
+    transition: opacity 0.3s ease;
+}
+
+.social-icons a:hover img {
+    opacity: 0.8;
+}
+
+.footer-nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px; /* Space between nav links */
+    margin-bottom: 20px;
+    padding: 0;
+    justify-content: flex-end; /* Align to the right */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.footer-nav-links li a {
+    color: #E0E0E0;
+    font-size: 0.95em;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.footer-nav-links li a:hover {
+    color: #A855F7; /* Purple accent on hover */
+}
+
+.footer-legal-links {
+    display: flex;
+    gap: 20px; /* Space between legal links */
+    justify-content: flex-end; /* Align to the right */
+}
+
+.footer-legal-links a {
+    font-size: 0.85em;
+    color: #888888; /* Lighter grey for legal links */
+    transition: color 0.3s ease;
+}
+
+.footer-legal-links a:hover {
+    color: #E0E0E0; /* Lighter on hover */
+    text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    header {
+        background-color: rgba(0, 0, 0, 0.7); /* Add semi-transparent background for better visibility on mobile */
+    }
+    nav ul {
+        display: none; /* Simple hide for mobile, can be replaced with burger menu JS */
+    }
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 120px; /* Adjusted for mobile */
+    }
+    .hero-content {
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+    .hero-images {
+        width: 80%;
+    }
+    .hero-images .sub-hero-img1, .hero-images .sub-hero-img2 {
+        width: 35%;
+    }
+    .protocol-card, .showcase-gallery img {
+        width: calc(50% - 15px); /* Two cards/images per row */
+    }
+    .testimonial {
+        flex-direction: column;
+        height: auto;
+    }
+    .testimonial-content {
+        padding: 40px;
+        text-align: left;
+    }
+    .testimonial-content p {
+        max-width: 100%;
+    }
+    .testimonial-image-container {
+        height: 300px;
+    }
+    .easy-steps {
+        flex-direction: column;
+    }
+    .steps-content, .steps-image img {
+        max-width: 100%;
+    }
+    .cta-amplify {
+        flex-direction: column;
+        text-align: center;
+    }
+    .cta-content {
+        max-width: 100%;
+        text-align: center;
+    }
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-links {
+        text-align: center;
+    }
+    .footer-links ul {
+        padding-left: 0;
+    }
+    .social-icons a {
+        margin: 0 10px;
+    }
+    .footer-links p a {
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+    .brand-logos img {
+        max-height: 70px; /* Larger than before, but still smaller than desktop */
+        max-width: 180px;
+        flex-basis: calc(50% - 30px); /* Two logos per row on medium screens */
+    }
+    .protocol-card, .showcase-gallery img {
+        width: 100%; /* One card/image per row */
+    }
+    .services-grid {
+        grid-template-columns: 1fr; /* Single column for services */
+    }
+    .cta-content h2 {
+        font-size: 2.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 15px 3%;
+        background-color: rgba(0, 0, 0, 0.8); /* Darker background for better visibility on small screens */
+    }
+    nav .logo {
+        font-size: 1.5em;
+    }
+    .get-quote-btn {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+    .hero {
+        padding-top: 100px; /* Adjusted for small screens */
+    }
+    .hero-content h1 {
+        font-size: 2em;
+    }
+    .explore-now-btn {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+    .trusted-brands h2, .podcast-showcase h2, .full-service-production h2, .steps-content h2 {
+        font-size: 1.8em;
+    }
+    .trusted-brands {
+        padding: 60px 3%;
+    }
+    .brand-logos {
+        gap: 30px 20px;
+    }
+    .brand-logos img {
+        max-height: 60px;
+        max-width: 140px;
+        flex-basis: 100%; /* One logo per row on very small screens */
+    }
+    .cta-content h2 {
+        font-size: 1.8em;
+    }
+    .start-your-podcast-btn {
+        padding: 15px 30px;
+        font-size: 1.1em;
+    }
+    .footer-about h3 {
+        font-size: 1.5em;
+    }
+}
