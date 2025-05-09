@@ -21,31 +21,31 @@ function initFeaturedTestimonialSlider() {
             name: 'Rob Napoli',
             company: 'The Bear Necessities / Omniboost.io',
             text: 'Ipsum vel nobis doloremque est aut non accusantium vero molestias. Et est minima dolorem eum modi atque sint nobis. Enim quod facere. Reiciendis necessitatibus ipsam non aspernatur voluptate id.',
-            image: 'images/testimonial-woman.jpg'
+            image: 'images/rob.jpg'
         },
         {
             name: 'Sarah Johnson',
             company: 'Tech Innovators / Digital Media',
             text: 'Working with BrokenFrameStudio transformed our podcast series. Their attention to detail and creative approach resulted in a professional production that exceeded our expectations. Our audience engagement has increased significantly.',
-            image: 'images/testimonial-woman.jpg'
+            image: 'images/sarah.jpeg'
         },
         {
             name: 'Michael Chen',
             company: 'Global Insights Podcast',
             text: 'The team delivered a powerful visual narrative. The final cut was clean, professional, and exactly what we needed to make an impact with our audience. Their technical expertise and creative vision were invaluable.',
-            image: 'images/testimonial-woman.jpg'
+            image: 'images/michael.jpg'
         },
         {
             name: 'Lisa Wentz',
             company: 'Executive Speaking Coach',
             text: 'Collaborating with Niranjan was seamless. He brought both technical skill and a calm, professional presence to the shoot. The final video reflected exactly the clarity and presence I wanted to convey to my audience.',
-            image: 'images/testimonial-woman.jpg'
+            image: 'images/lima.jpg'
         },
         {
             name: 'David Williams',
             company: 'Startup Founder / Innovation Hub',
             text: 'From concept to execution, the team delivered exceptional results. Their understanding of our brand voice and audience needs made the entire process smooth and the final product outstanding.',
-            image: 'images/testimonial-woman.jpg'
+            image: 'images/david.jpeg'
         }
     ];
 
