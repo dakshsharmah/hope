@@ -9,12 +9,19 @@
     <script src="js/testimonials.js" defer></script>
     <script src="js/testimonial-slider.js" defer></script>
     <script src="js/featured-testimonial.js" defer></script>
+    <script src="js/hero-animation.js" defer></script>
 </head>
 <body>
     <header>
         <nav>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
             <div class="logo">BROKENFRAMESTUDIO</div>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="#">HOME</a></li>
                 <li><a href="#">ABOUT</a></li>
                 <li><a href="#">SERVICES</a></li>
@@ -28,7 +35,7 @@
     <main>
         <section class="hero">
             <div class="hero-content">
-                <h1>Crafting impactful podcasts through brand storytelling & creativity</h1>
+                <h1><span>Crafting impactful podcasts through brand storytelling & creativity</span></h1>
                 <button class="explore-now-btn">EXPLORE NOW &rarr;</button>
             </div>
             <div class="hero-images">
@@ -113,7 +120,7 @@
                     </div>
                 </div>
                 <div class="featured-testimonial-image">
-                    <img src="images/testimonial-woman.jpg" alt="Rob Napoli">
+                    <img src="images/testimonial-rob-napoli.png" alt="Rob Napoli">
                 </div>
             </div>
         </section>
