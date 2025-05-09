@@ -15,6 +15,7 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-app.listen(port, () => {
-  console.log(`Server listening on port ${port}`);
+app.listen(port, '0.0.0.0', () => {
+  console.log(`Server listening on http://0.0.0.0:${port} or http://<your-local-ip>:${port}`);
+  console.log(`Accessible externally via http://<your-external-ip>:${port} (if firewall and port forwarding are configured)`);
 });
